@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RootViewController.swift
 //  LockerRoomV5
 //
 //  Created by NANZI WANG on 1/28/17.
@@ -8,17 +8,36 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class RootViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var menuTableView: UITableView!
+    
+    let menuNameArr = ["HOMEHOME","HOME","CONTACTS","RESOURCES & TOOLS","NEW HIRES","MANAGER'S CORNER"]
+    let iconImage = [UIImage(named:"ICON_CTS")!,UIImage(named:"ICON_CTS")!,UIImage(named: "ICON_RESOURCES")!,UIImage(named: "ICON_NEWHIRE")!,UIImage(named: "ICON_MANAGER")!]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        menuTableView.delegate = self
+        menuTableView.dataSource = self
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return menuNameArr.count
     }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = menuNameArr[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let menuName = menuNameArr[indexPath.row]
+        performSegue(withIdentifier: menuName, sender: menuName)
+    }
+
 
 
 }

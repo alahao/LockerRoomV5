@@ -1,0 +1,6 @@
+framework module Pods_LockerRoomV5 {
+  umbrella header "Pods-LockerRoomV5-umbrella.h"
+
+  export *
+  module * { export * }
+}
