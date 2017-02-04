@@ -12,7 +12,7 @@ class RootViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var menuTableView: UITableView!
     
-    let menuNameArr = ["HOMEHOME","HOME","CONTACTS","RESOURCES & TOOLS","NEW HIRES","MANAGER'S CORNER"]
+    let menuNameArr = ["HOME","CONTACTS","RESOURCES & TOOLS","NEW HIRES","MANAGER'S CORNER"]
     let iconImage = [UIImage(named:"ICON_CTS")!,UIImage(named:"ICON_CTS")!,UIImage(named: "ICON_RESOURCES")!,UIImage(named: "ICON_NEWHIRE")!,UIImage(named: "ICON_MANAGER")!]
     
 
