@@ -11,6 +11,7 @@ import UIKit
 class RootViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var menuTableView: UITableView!
+ 
     
     let menuNameArr = ["HOME","CONTACTS","RESOURCES & TOOLS","NEW HIRES","MANAGER'S CORNER"]
     let iconImage = [UIImage(named:"ICON_CTS")!,UIImage(named:"ICON_CTS")!,UIImage(named: "ICON_RESOURCES")!,UIImage(named: "ICON_NEWHIRE")!,UIImage(named: "ICON_MANAGER")!]
@@ -29,6 +30,8 @@ class RootViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
+
+        cell.imageView?.image = iconImage[indexPath.row]
         cell.textLabel?.text = menuNameArr[indexPath.row]
         return cell
     }

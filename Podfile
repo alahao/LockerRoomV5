@@ -17,7 +17,9 @@ target 'LockerRoomV5' do
     # Pods for testing
   end
 
-pod 'Firebase/Core'
 pod 'SideMenu'
-
+pod 'Firebase'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
+pod 'Firebase/Storage'
 end

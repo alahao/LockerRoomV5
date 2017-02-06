@@ -107,10 +107,10 @@ open class SideMenuManager : NSObject {
     open static var menuPresentingViewControllerUserInteractionEnabled: Bool = false
     
     /// The strength of the parallax effect on the existing view controller. Does not apply to `menuPresentMode` when set to `ViewSlideOut`. Default is 0.
-    open static var menuParallaxStrength: Int = 0
+    open static var menuParallaxStrength: Int = 1
     
     /// Draws the `menuAnimationBackgroundColor` behind the status bar. Default is true.
-    open static var menuFadeStatusBar = true
+    open static var menuFadeStatusBar = false
     
     /// The animation options when a menu is displayed. Ignored when displayed with a gesture.
     open static var menuAnimationOptions: UIViewAnimationOptions = .curveEaseInOut
