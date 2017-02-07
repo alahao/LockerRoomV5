@@ -22,12 +22,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7OW-Ep-HTM">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7OW-Ep-HTM">
                                 <rect key="frame" x="0.0" y="76" width="375" height="591"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.96083722930000004" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.96083722930000004" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexBackgroundColor" white="0.96083722930000004" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NAVIGATION_HEADER_03.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xp9-C8-9uO">
                                 <rect key="frame" x="34" y="38" width="208" height="23"/>
@@ -145,7 +144,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="597"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="185" id="ru8-P1-m48" customClass="NewsTableViewCell" customModule="LockerRoomV5" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="185" id="ru8-P1-m48" customClass="NewsTableViewCell" customModule="LockerRoomV5" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="375" height="185"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ru8-P1-m48" id="cGE-VZ-4ul">
@@ -153,19 +152,11 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8du-Lb-afP">
-                                                            <rect key="frame" x="25" y="25" width="325" height="18"/>
+                                                            <rect key="frame" x="25" y="15" width="325" height="18"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                                             <color key="textColor" red="0.0" green="0.4039215686" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DA0-Df-7lN">
-                                                            <rect key="frame" x="23" y="45" width="331" height="200"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                        </textView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOh-XS-xAA">
                                                             <rect key="frame" x="28" y="163" width="160" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -173,18 +164,28 @@
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uro-st-lMs">
+                                                            <rect key="frame" x="33" y="41" width="309" height="100.5"/>
+                                                            <mutableString key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</mutableString>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="8du-Lb-afP" secondAttribute="trailing" constant="25" id="3eS-wb-tIL"/>
-                                                        <constraint firstItem="8du-Lb-afP" firstAttribute="top" secondItem="cGE-VZ-4ul" secondAttribute="top" constant="25" id="6o9-5T-oUk"/>
-                                                        <constraint firstItem="DA0-Df-7lN" firstAttribute="leading" secondItem="cGE-VZ-4ul" secondAttribute="leadingMargin" constant="15" id="Z1Y-eu-zbx"/>
-                                                        <constraint firstItem="DA0-Df-7lN" firstAttribute="top" secondItem="8du-Lb-afP" secondAttribute="bottom" constant="2" id="fEB-NV-7bu"/>
+                                                        <constraint firstItem="8du-Lb-afP" firstAttribute="top" secondItem="cGE-VZ-4ul" secondAttribute="top" constant="15" id="6o9-5T-oUk"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="Uro-st-lMs" secondAttribute="trailing" constant="25" id="Eka-mT-7EZ"/>
                                                         <constraint firstItem="8du-Lb-afP" firstAttribute="leading" secondItem="cGE-VZ-4ul" secondAttribute="leading" constant="25" id="hhf-Rk-IXg"/>
-                                                        <constraint firstAttribute="trailingMargin" secondItem="DA0-Df-7lN" secondAttribute="trailing" constant="13" id="rxf-9A-HBM"/>
+                                                        <constraint firstItem="Uro-st-lMs" firstAttribute="top" secondItem="8du-Lb-afP" secondAttribute="bottom" constant="8" id="nF8-Am-gZL"/>
+                                                        <constraint firstItem="Uro-st-lMs" firstAttribute="leading" secondItem="cGE-VZ-4ul" secondAttribute="leadingMargin" constant="25" id="xle-pR-79o"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                                </accessibility>
                                                 <connections>
-                                                    <outlet property="newsBodyLabel" destination="DA0-Df-7lN" id="yqd-af-E03"/>
+                                                    <outlet property="newsBodyLabel" destination="Uro-st-lMs" id="7rI-c1-TxA"/>
                                                     <outlet property="newsDateLabel" destination="rOh-XS-xAA" id="5Wq-YD-Tvk"/>
                                                     <outlet property="newsTitleLabel" destination="8du-Lb-afP" id="ZYm-Gl-VEe"/>
                                                 </connections>
