@@ -28,8 +28,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let newsArticle = NewsArticle()
             newsArticle.newsBody = (snapshot.value as! NSDictionary)["body"] as! String
             newsArticle.newsTitle = (snapshot.value as! NSDictionary)["title"] as! String
-            print("Title of the news is \(newsArticle.newsTitle)")
-            print("Body of the news is \(newsArticle.newsBody)")
+            newsArticle.newsDate = (snapshot.value as! NSDictionary)["date"] as! String
             
             self.newsArticles.append(newsArticle)
             self.newsTableView.reloadData()
@@ -45,11 +44,13 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell") as! NewsTableViewCell
         
         let news = newsArticles[indexPath.row]
         
-        cell.textLabel?.text = news.newsTitle
+        cell.newsTitleLabel.text = news.newsTitle
+        cell.newsBodyLabel.text = news.newsBody
+        cell.newsDateLabel.text = news.newsDate
         return cell
     }
 

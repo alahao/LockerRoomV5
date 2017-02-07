@@ -46,6 +46,7 @@ class ContactViewController: UIViewController, UITableViewDelegate, UITableViewD
         let contact = contacts[indexPath.row]
         
         cell.textLabel?.text = contact.firstName + " " + contact.lastName
+        cell.detailTextLabel?.text = contact.lastName
         return cell
     }
     

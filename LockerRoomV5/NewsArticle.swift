@@ -10,5 +10,5 @@ import Foundation
 class NewsArticle {
     var newsTitle = ""
     var newsBody = ""
-    
+    var newsDate = ""
 }
