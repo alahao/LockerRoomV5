@@ -83,7 +83,7 @@
                         <outlet property="menuTableView" destination="7OW-Ep-HTM" id="Yzq-Pm-Xil"/>
                         <segue destination="EOL-I4-ZuG" kind="show" identifier="CONTACTS" id="laa-fm-iw8"/>
                         <segue destination="Arm-gz-asc" kind="show" identifier="NEW HIRES" id="5Zc-75-WUV"/>
-                        <segue destination="xLi-yu-EpM" kind="show" identifier="NEWS" id="e77-Bw-NWH"/>
+                        <segue destination="xLi-yu-EpM" kind="show" identifier="HOME" id="e77-Bw-NWH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -142,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3nQ-1l-418" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2013.5999999999999" y="-272.11394302848578"/>
+            <point key="canvasLocation" x="2014" y="-135"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="F9W-Q1-AYf">
@@ -203,9 +203,10 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="g8g-4n-NE0">
                                 <rect key="frame" x="10" y="70" width="355" height="597"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="185" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Iw-Vl-9Jx">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="185" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Iw-Vl-9Jx">
                                         <rect key="frame" x="0.0" y="0.0" width="355" height="597"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="185" id="ru8-P1-m48" customClass="NewsTableViewCell" customModule="LockerRoomV5" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="355" height="185"/>
@@ -363,7 +364,7 @@
         <image name="NAVIGATION_HEADER_03.png" width="443" height="41"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aPt-A0-SKq"/>
-        <segue reference="Kh6-pG-FLO"/>
+        <segue reference="ANA-cH-1MP"/>
+        <segue reference="e77-Bw-NWH"/>
     </inferredMetricsTieBreakers>
 </document>

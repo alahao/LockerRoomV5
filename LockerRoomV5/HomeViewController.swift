@@ -55,22 +55,15 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
     }
     
- 
-    
+
+    // There is just one row in every section
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return newsArticles.count
+       return newsArticles.count
     }
     
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 10 // space b/w cells
-    }
     
     // Make the background color show through
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let footerView = UIView()
-        footerView.backgroundColor = UIColor.clear
-        return footerView
-    }
+ 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell") as! NewsTableViewCell
@@ -81,9 +74,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.newsBodyLabel.text = news.newsBody
         cell.newsDateLabel.text = news.newsDate
         
-        cell.layer.borderWidth = 1.0
-        cell.layer.borderColor = UIColor.lightGray.cgColor
-        cell.layer.cornerRadius = 8
+     
         
         return cell
     }
