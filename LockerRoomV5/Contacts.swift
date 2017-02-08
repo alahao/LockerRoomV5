@@ -8,6 +8,7 @@
 
 import Foundation
 class Contacts {
+    var departmentName = ""
     var firstName = ""
     var lastName = ""
     

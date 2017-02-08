@@ -13,8 +13,8 @@ class RootViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var menuTableView: UITableView!
  
     
-    let menuNameArr = ["NEWS","CONTACTS","RESOURCES & TOOLS","NEW HIRES","MANAGER'S CORNER"]
-    let iconImage = [UIImage(named:"ICON_CTS")!,UIImage(named:"ICON_CTS")!,UIImage(named: "ICON_RESOURCES")!,UIImage(named: "ICON_NEWHIRE")!,UIImage(named: "ICON_MANAGER")!]
+    let menuNameArr = ["HOME","CONTACTS","RESOURCES & TOOLS","NEW HIRES","MANAGER'S CORNER","EMPLOYEE FAQ","CALENDAR","RSN SPECIFIC","TIMEKEEPER","SELF-SERVICE PORTOAL","FEEDBACK CHAT"]
+    let iconImage = [UIImage(named:"ICON_RSN")!,UIImage(named:"ICON_CTS")!,UIImage(named: "ICON_RESOURCES")!,UIImage(named: "ICON_NEWHIRE")!,UIImage(named: "ICON_MANAGER")!,UIImage(named: "ICON_FAQ")!,UIImage(named: "ICON_CALENDAR")!,UIImage(named: "ICON_RSN")!,UIImage(named: "ICON_TIMEKEEPER")!,UIImage(named: "ICON_SELFSERVICE")!,UIImage(named: "ICON_CHAT")!]
     
 
     override func viewDidLoad() {
@@ -29,10 +29,10 @@ class RootViewController: UIViewController, UITableViewDelegate, UITableViewData
         return menuNameArr.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell") as! RootMenuTableViewCell
 
-        cell.imageView?.image = iconImage[indexPath.row]
-        cell.textLabel?.text = menuNameArr[indexPath.row]
+        cell.iconImageView.image = iconImage[indexPath.row]
+        cell.menuLabel.text = menuNameArr[indexPath.row]
         return cell
     }
     

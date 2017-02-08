@@ -21,11 +21,10 @@ class ContactViewController: UIViewController, UITableViewDelegate, UITableViewD
         contactTableView.delegate = self
         contactTableView.dataSource = self
         
-        FIRDatabase.database().reference().child("contacts").observe(FIRDataEventType.childAdded, with: { (snapshot) in
+        FIRDatabase.database().reference().child("contacts").child("Departments").observe(FIRDataEventType.childAdded, with: { (snapshot) in
             let contact = Contacts()
-            contact.firstName = (snapshot.value as! NSDictionary)["firstName"] as! String
-            contact.lastName = (snapshot.value as! NSDictionary)["lastName"] as! String
-           
+            contact.departmentName = (snapshot.value as! NSDictionary)["name"] as! String
+            
             
             self.contacts.append(contact)
             self.contactTableView.reloadData()
@@ -45,8 +44,7 @@ class ContactViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let contact = contacts[indexPath.row]
         
-        cell.textLabel?.text = contact.firstName + " " + contact.lastName
-        cell.detailTextLabel?.text = contact.lastName
+        cell.textLabel?.text = contact.departmentName
         return cell
     }
     

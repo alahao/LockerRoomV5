@@ -32,6 +32,22 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
             self.newsArticles.append(newsArticle)
             self.newsTableView.reloadData()
+            
+            
+            //assuming we already have our navigationController
+            let navigationBar = UINavigationBar()
+            let myNicelLogoWidth = 50
+            let myNiceLogoHeight = 20
+            //start positioning your logo at 0.0, 0.0
+            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: myNicelLogoWidth, height: myNiceLogoHeight))
+            imageView.contentMode = .scaleAspectFit
+            imageView.center = navigationBar.center //the put your image at the center
+            
+            let image = UIImage(named: "LOCKERROOM_MAIN_HEADER_03")
+            imageView.image = image
+            
+            
+            self.navigationItem.titleView = imageView
        
         })
        
@@ -39,8 +55,21 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
     }
     
+ 
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return newsArticles.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 10 // space b/w cells
+    }
+    
+    // Make the background color show through
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerView = UIView()
+        footerView.backgroundColor = UIColor.clear
+        return footerView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -51,6 +80,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.newsTitleLabel.text = news.newsTitle
         cell.newsBodyLabel.text = news.newsBody
         cell.newsDateLabel.text = news.newsDate
+        
+        cell.layer.borderWidth = 1.0
+        cell.layer.borderColor = UIColor.lightGray.cgColor
+        cell.layer.cornerRadius = 8
+        
         return cell
     }
 
