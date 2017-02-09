@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class Contacts {
+class ContactsCat {
     var departmentName = ""
     var firstName = ""
     var lastName = ""

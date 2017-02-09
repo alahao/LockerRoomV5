@@ -13,7 +13,7 @@ import FirebaseDatabase
 class ContactViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var contactTableView: UITableView!
 
-    var contacts : [Contacts] = []
+    var contacts : [ContactsCat] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class ContactViewController: UIViewController, UITableViewDelegate, UITableViewD
         contactTableView.dataSource = self
         
         FIRDatabase.database().reference().child("contacts").child("Departments").observe(FIRDataEventType.childAdded, with: { (snapshot) in
-            let contact = Contacts()
+            let contact = ContactsCat()
             contact.departmentName = (snapshot.value as! NSDictionary)["name"] as! String
             
             
@@ -42,9 +42,17 @@ class ContactViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
-        let contact = contacts[indexPath.row]
+        let contactCat = contacts[indexPath.row]
         
-        cell.textLabel?.text = contact.departmentName
+        print(contacts.count)
+        print(contacts[indexPath.row])
+        
+        cell.textLabel!.text = contactCat.departmentName
+        
+        tableView.layer.masksToBounds = true
+        tableView.layer.borderColor = UIColor.lightGray.cgColor
+        tableView.layer.borderWidth = 2.0
+        tableView.layer.cornerRadius = 10.0
         return cell
     }
     
