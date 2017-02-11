@@ -11,6 +11,7 @@ import Firebase
 import FirebaseDatabase
 
 class ContactViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var contactTableView: UITableView!
 
     var contacts : [ContactsCat] = []
@@ -32,7 +33,13 @@ class ContactViewController: UIViewController, UITableViewDelegate, UITableViewD
         })
         
         // Do any additional setup after loading the view.
-        
+        //Slide out menu
+        if revealViewController() != nil{
+            
+            menuButton.target = revealViewController()
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

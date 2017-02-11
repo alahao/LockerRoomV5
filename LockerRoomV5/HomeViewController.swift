@@ -40,13 +40,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Do any additional setup after loading the view.
         
         //Slide out menu
-  
+        if revealViewController() != nil{
+        
             menuButton.target = revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
-            
-        actionButton.target = revealViewController()
-        actionButton.action = #selector(SWRevealViewController.revealToggle(_:))
-        
+            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
     }
     
 

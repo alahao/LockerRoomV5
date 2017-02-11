@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3D2373E71E4C2B5200011155 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2373E61E4C2B5200011155 /* ContactTableViewCell.swift */; };
 		3D6212D61E4EC759008936C4 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6212D51E4EC759008936C4 /* SWRevealViewController.m */; };
+		3D6212DF1E4EDF30008936C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D6212DD1E4EDF30008936C4 /* Main.storyboard */; };
+		3D6212E31E4EEC65008936C4 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6212E21E4EEC65008936C4 /* CalendarViewController.swift */; };
+		3D6212E51E4EF0E9008936C4 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6212E41E4EF0E9008936C4 /* Calendar.swift */; };
 		3D78AD6C1E3EA04E001C10DB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D78AD6B1E3EA04E001C10DB /* HomeViewController.swift */; };
 		3D78AD871E3EA47E001C10DB /* ICON_MENU_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D78AD6D1E3EA47E001C10DB /* ICON_MENU_03.png */; };
 		3D78AD881E3EA47E001C10DB /* NAVIGATION_HEADER_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D78AD6E1E3EA47E001C10DB /* NAVIGATION_HEADER_03.png */; };
@@ -34,6 +37,7 @@
 		3D78AD9C1E3EA47E001C10DB /* ICON_CALENDAR.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D78AD831E3EA47E001C10DB /* ICON_CALENDAR.png */; };
 		3D78AD9D1E3EA47E001C10DB /* ICON_ADD.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D78AD841E3EA47E001C10DB /* ICON_ADD.png */; };
 		3D78AD9E1E3EA47E001C10DB /* ICON_FAQ.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D78AD851E3EA47E001C10DB /* ICON_FAQ.png */; };
+		3D82FE041E4EF51A00413EE3 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D82FE031E4EF51A00413EE3 /* CalendarTableViewCell.swift */; };
 		3DAEF1BD1E462B800060D53D /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAEF1BC1E462B800060D53D /* NewsArticle.swift */; };
 		3DAEF1C01E4643770060D53D /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAEF1BF1E4643770060D53D /* ContactViewController.swift */; };
 		3DAEF1C21E468D740060D53D /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAEF1C11E468D740060D53D /* Contacts.swift */; };
@@ -65,7 +69,6 @@
 		3DAEF1F71E4996F00060D53D /* RootMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAEF1F61E4996F00060D53D /* RootMenuTableViewCell.swift */; };
 		3DEE9B471E3DA1D6001A4ED1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEE9B461E3DA1D6001A4ED1 /* AppDelegate.swift */; };
 		3DEE9B491E3DA1D6001A4ED1 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEE9B481E3DA1D6001A4ED1 /* RootViewController.swift */; };
-		3DEE9B4C1E3DA1D7001A4ED1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DEE9B4A1E3DA1D7001A4ED1 /* Main.storyboard */; };
 		3DEE9B4E1E3DA1D7001A4ED1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DEE9B4D1E3DA1D7001A4ED1 /* Assets.xcassets */; };
 		3DEE9B511E3DA1D7001A4ED1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DEE9B4F1E3DA1D7001A4ED1 /* LaunchScreen.storyboard */; };
 		3DEE9B5C1E3DA1D7001A4ED1 /* LockerRoomV5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEE9B5B1E3DA1D7001A4ED1 /* LockerRoomV5Tests.swift */; };
@@ -100,6 +103,9 @@
 		3D6212D31E4EC758008936C4 /* LockerRoomV5-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LockerRoomV5-Bridging-Header.h"; sourceTree = "<group>"; };
 		3D6212D41E4EC759008936C4 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		3D6212D51E4EC759008936C4 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		3D6212DE1E4EDF30008936C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3D6212E21E4EEC65008936C4 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		3D6212E41E4EF0E9008936C4 /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		3D78AD6B1E3EA04E001C10DB /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3D78AD6D1E3EA47E001C10DB /* ICON_MENU_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ICON_MENU_03.png; sourceTree = "<group>"; };
 		3D78AD6E1E3EA47E001C10DB /* NAVIGATION_HEADER_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NAVIGATION_HEADER_03.png; sourceTree = "<group>"; };
@@ -125,6 +131,7 @@
 		3D78AD831E3EA47E001C10DB /* ICON_CALENDAR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ICON_CALENDAR.png; sourceTree = "<group>"; };
 		3D78AD841E3EA47E001C10DB /* ICON_ADD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ICON_ADD.png; sourceTree = "<group>"; };
 		3D78AD851E3EA47E001C10DB /* ICON_FAQ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ICON_FAQ.png; sourceTree = "<group>"; };
+		3D82FE031E4EF51A00413EE3 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		3DAEF1BC1E462B800060D53D /* NewsArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsArticle.swift; sourceTree = "<group>"; };
 		3DAEF1BF1E4643770060D53D /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		3DAEF1C11E468D740060D53D /* Contacts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
@@ -157,7 +164,6 @@
 		3DEE9B431E3DA1D6001A4ED1 /* LockerRoomV5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LockerRoomV5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DEE9B461E3DA1D6001A4ED1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DEE9B481E3DA1D6001A4ED1 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		3DEE9B4B1E3DA1D7001A4ED1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DEE9B4D1E3DA1D7001A4ED1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DEE9B501E3DA1D7001A4ED1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DEE9B521E3DA1D7001A4ED1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -262,6 +268,7 @@
 			children = (
 				3DAEF1C11E468D740060D53D /* Contacts.swift */,
 				3DAEF1BC1E462B800060D53D /* NewsArticle.swift */,
+				3D6212E41E4EF0E9008936C4 /* Calendar.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -325,11 +332,13 @@
 				3DEE9B461E3DA1D6001A4ED1 /* AppDelegate.swift */,
 				3DEE9B481E3DA1D6001A4ED1 /* RootViewController.swift */,
 				3DAEF1F61E4996F00060D53D /* RootMenuTableViewCell.swift */,
-				3DEE9B4A1E3DA1D7001A4ED1 /* Main.storyboard */,
 				3D78AD6B1E3EA04E001C10DB /* HomeViewController.swift */,
+				3D6212DD1E4EDF30008936C4 /* Main.storyboard */,
 				3DAEF1C31E497FF40060D53D /* NewsTableViewCell.swift */,
 				3DAEF1BF1E4643770060D53D /* ContactViewController.swift */,
 				3D2373E61E4C2B5200011155 /* ContactTableViewCell.swift */,
+				3D6212E21E4EEC65008936C4 /* CalendarViewController.swift */,
+				3D82FE031E4EF51A00413EE3 /* CalendarTableViewCell.swift */,
 				3DAEF1BE1E462C000060D53D /* Model */,
 				3DEE9B4D1E3DA1D7001A4ED1 /* Assets.xcassets */,
 				3DEE9B4F1E3DA1D7001A4ED1 /* LaunchScreen.storyboard */,
@@ -509,6 +518,7 @@
 				3DAEF1F31E49947A0060D53D /* Icon-App-83.5x83.5@2x.png in Resources */,
 				3DAEF1F21E49947A0060D53D /* Icon-App-76x76@3x.png in Resources */,
 				3DEE9B511E3DA1D7001A4ED1 /* LaunchScreen.storyboard in Resources */,
+				3D6212DF1E4EDF30008936C4 /* Main.storyboard in Resources */,
 				3D78AD971E3EA47E001C10DB /* ICON_RSN.png in Resources */,
 				3DAEF1DF1E49947A0060D53D /* Contents.json in Resources */,
 				3D78AD9A1E3EA47E001C10DB /* ICON_SETTINGS.png in Resources */,
@@ -540,7 +550,6 @@
 				3DAEF1EF1E49947A0060D53D /* Icon-App-72x72@2x.png in Resources */,
 				3D78AD881E3EA47E001C10DB /* NAVIGATION_HEADER_03.png in Resources */,
 				3DEE9B4E1E3DA1D7001A4ED1 /* Assets.xcassets in Resources */,
-				3DEE9B4C1E3DA1D7001A4ED1 /* Main.storyboard in Resources */,
 				3D78AD9D1E3EA47E001C10DB /* ICON_ADD.png in Resources */,
 				3DAEF1C61E49938D0060D53D /* LOCKERROOM_MOCKUP_SPLASH.jpg in Resources */,
 				3D78AD9B1E3EA47E001C10DB /* ICON_SEARCH.png in Resources */,
@@ -719,9 +728,12 @@
 				3DEE9B491E3DA1D6001A4ED1 /* RootViewController.swift in Sources */,
 				3DAEF1C41E497FF40060D53D /* NewsTableViewCell.swift in Sources */,
 				3DAEF1F71E4996F00060D53D /* RootMenuTableViewCell.swift in Sources */,
+				3D6212E31E4EEC65008936C4 /* CalendarViewController.swift in Sources */,
 				3DAEF1BD1E462B800060D53D /* NewsArticle.swift in Sources */,
+				3D82FE041E4EF51A00413EE3 /* CalendarTableViewCell.swift in Sources */,
 				3DAEF1C21E468D740060D53D /* Contacts.swift in Sources */,
 				3D78AD6C1E3EA04E001C10DB /* HomeViewController.swift in Sources */,
+				3D6212E51E4EF0E9008936C4 /* Calendar.swift in Sources */,
 				3D2373E71E4C2B5200011155 /* ContactTableViewCell.swift in Sources */,
 				3D6212D61E4EC759008936C4 /* SWRevealViewController.m in Sources */,
 				3DEE9B471E3DA1D6001A4ED1 /* AppDelegate.swift in Sources */,
@@ -761,10 +773,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3DEE9B4A1E3DA1D7001A4ED1 /* Main.storyboard */ = {
+		3D6212DD1E4EDF30008936C4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3DEE9B4B1E3DA1D7001A4ED1 /* Base */,
+				3D6212DE1E4EDF30008936C4 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

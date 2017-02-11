@@ -25,7 +25,7 @@
                     </view>
                     <connections>
                         <segue destination="mWt-0X-lOt" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="Ypi-2M-FKZ"/>
-                        <segue destination="BYZ-38-t0r" kind="custom" identifier="sw_rear" id="6F0-cn-lxE"/>
+                        <segue destination="BYZ-38-t0r" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="6F0-cn-lxE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qxP-jR-mhu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -54,7 +54,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V8N-5u-IMw" id="Elj-Us-Crk">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="51.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ibz-jI-63b">
@@ -82,7 +82,6 @@
                                         <connections>
                                             <outlet property="iconImageView" destination="Ibz-jI-63b" id="NRv-OQ-fdd"/>
                                             <outlet property="menuLabel" destination="smS-K4-Hjf" id="pbE-Il-8wj"/>
-                                            <segue destination="mWt-0X-lOt" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="hNP-2p-eAb"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -104,6 +103,9 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="menuTableView" destination="7OW-Ep-HTM" id="Yzq-Pm-Xil"/>
+                        <segue destination="vxB-pE-spN" kind="custom" identifier="CONTACTS" customClass="SWRevealViewControllerSeguePushController" id="nbv-hb-p4N"/>
+                        <segue destination="mWt-0X-lOt" kind="custom" identifier="HOME" customClass="SWRevealViewControllerSeguePushController" id="W4s-Hu-OdL"/>
+                        <segue destination="4kU-6i-pOe" kind="custom" identifier="CALENDAR" customClass="SWRevealViewControllerSeguePushController" id="yd9-nE-Cx3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -136,7 +138,7 @@
                                         <rect key="frame" x="0.0" y="28" width="313" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Cm-a2-J5r" id="RP2-91-0Ve">
-                                            <rect key="frame" x="0.0" y="0.0" width="280" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HUMAN RESOURCES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFy-SG-ToI">
@@ -154,7 +156,7 @@
                                         <connections>
                                             <outlet property="contactCatLabel" destination="EFy-SG-ToI" id="KCR-yi-P8b"/>
                                             <outlet property="contactCell" destination="RP2-91-0Ve" id="jXk-DP-NMd"/>
-                                            <segue destination="2uL-mf-Vfu" kind="showDetail" action="showViewController:sender:" id="30g-Cr-y12"/>
+                                            <segue destination="2uL-mf-Vfu" kind="show" id="30g-Cr-y12"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -175,11 +177,92 @@
                     </navigationItem>
                     <connections>
                         <outlet property="contactTableView" destination="BjY-Ga-iDn" id="bBB-i3-xRU"/>
+                        <outlet property="menuButton" destination="ucC-OP-Mhd" id="WWf-rD-tdI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3nQ-1l-418" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2473" y="701"/>
+        </scene>
+        <!--CALENDAR-->
+        <scene sceneID="M0R-Au-JFe">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="rKO-e7-yOK" customClass="CalendarViewController" customModule="LockerRoomV5" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pFf-i5-Xph"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pxj-hd-z9b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dMI-zt-e0S">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Qy-sS-hYC">
+                                <rect key="frame" x="31" y="144" width="313" height="523"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="calendarCell" id="LeY-YI-Wi0" customClass="CalendarTableViewCell" customModule="LockerRoomV5" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="313" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="LeY-YI-Wi0" id="iw8-0u-Gt9">
+                                            <rect key="frame" x="0.0" y="0.0" width="313" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1d-86-1KI">
+                                                    <rect key="frame" x="8" y="11.5" width="38.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Holiday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzK-hA-yFP">
+                                                    <rect key="frame" x="87" y="11.5" width="57.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bzK-hA-yFP" firstAttribute="leading" secondItem="iw8-0u-Gt9" secondAttribute="leadingMargin" constant="79" id="93X-f8-d0h"/>
+                                                <constraint firstItem="bzK-hA-yFP" firstAttribute="centerY" secondItem="iw8-0u-Gt9" secondAttribute="centerY" id="DgT-MM-dUo"/>
+                                                <constraint firstItem="N1d-86-1KI" firstAttribute="leading" secondItem="iw8-0u-Gt9" secondAttribute="leadingMargin" id="mhI-Vt-A6D"/>
+                                                <constraint firstItem="N1d-86-1KI" firstAttribute="centerY" secondItem="iw8-0u-Gt9" secondAttribute="centerY" id="xsy-yS-2ea"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="calendarDate" destination="N1d-86-1KI" id="hyj-es-HAc"/>
+                                            <outlet property="calendarName" destination="bzK-hA-yFP" id="iXP-PY-pYe"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2017 NBCUNIVERSAL HOLIDAYS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYB-Mu-mCZ">
+                                <rect key="frame" x="31" y="105" width="291" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.4039215686" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="4Qy-sS-hYC" secondAttribute="trailing" constant="15" id="3av-AE-VdC"/>
+                            <constraint firstItem="4Qy-sS-hYC" firstAttribute="top" secondItem="pFf-i5-Xph" secondAttribute="bottom" constant="80" id="6v3-F0-FBt"/>
+                            <constraint firstItem="Pxj-hd-z9b" firstAttribute="top" secondItem="4Qy-sS-hYC" secondAttribute="bottom" id="QMU-7y-xdT"/>
+                            <constraint firstItem="4Qy-sS-hYC" firstAttribute="leading" secondItem="dMI-zt-e0S" secondAttribute="leadingMargin" constant="15" id="ZmV-HQ-uN0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="CALENDAR" id="27l-KE-rZt">
+                        <barButtonItem key="leftBarButtonItem" image="ICON_MENU_03.png" id="wUa-xS-fHS">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="calendarTableView" destination="4Qy-sS-hYC" id="Bo7-pO-Ri9"/>
+                        <outlet property="menuButton" destination="wUa-xS-fHS" id="rWV-or-fC9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qdF-2o-e81" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3509.5999999999999" y="699.40029985007504"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="F9W-Q1-AYf">
@@ -223,7 +306,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="355" height="185"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ru8-P1-m48" id="cGE-VZ-4ul">
-                                                    <rect key="frame" x="0.0" y="0.0" width="355" height="184"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="355" height="184.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8du-Lb-afP">
@@ -288,12 +371,8 @@
                         <barButtonItem key="leftBarButtonItem" image="ICON_MENU_03.png" id="6mQ-51-USO">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="kDj-ko-ZHP">
-                            <color key="tintColor" red="0.0" green="0.4039215686" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="actionButton" destination="kDj-ko-ZHP" id="BHf-Ft-kzX"/>
                         <outlet property="menuButton" destination="6mQ-51-USO" id="Ch0-SL-QkS"/>
                         <outlet property="newsTableView" destination="2Iw-Vl-9Jx" id="SZw-Ly-LOm"/>
                     </connections>
@@ -351,6 +430,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rrd-v7-uyC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.96083722930000004" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0" green="0.4039215686" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -361,12 +445,35 @@
             </objects>
             <point key="canvasLocation" x="2473" y="-49"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vyp-9Q-Jm9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4kU-6i-pOe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qdx-UJ-nuE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.96083722930000004" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0" green="0.4039215686" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.96083722930000004" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rKO-e7-yOK" kind="relationship" relationship="rootViewController" id="K4H-aY-S7m"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h11-B2-U1Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3511" y="-49"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ICON_MENU_03.png" width="24" height="22"/>
         <image name="NAVIGATION_HEADER_03.png" width="443" height="41"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ypi-2M-FKZ"/>
+        <segue reference="W4s-Hu-OdL"/>
     </inferredMetricsTieBreakers>
 </document>
