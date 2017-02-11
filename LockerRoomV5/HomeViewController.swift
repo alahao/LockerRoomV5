@@ -7,13 +7,15 @@
 //
 
 import UIKit
-import SideMenu
 import Firebase
 import FirebaseDatabase
 
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
  
+    @IBOutlet weak var actionButton: UIBarButtonItem!
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+
     @IBOutlet weak var newsTableView: UITableView!
     
     var newsArticles : [NewsArticle] = []
@@ -33,25 +35,17 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             self.newsArticles.append(newsArticle)
             self.newsTableView.reloadData()
             
-            
-            //assuming we already have our navigationController
-            let navigationBar = UINavigationBar()
-            let myNicelLogoWidth = 50
-            let myNiceLogoHeight = 20
-            //start positioning your logo at 0.0, 0.0
-            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: myNicelLogoWidth, height: myNiceLogoHeight))
-            imageView.contentMode = .scaleAspectFit
-            imageView.center = navigationBar.center //the put your image at the center
-            
-            let image = UIImage(named: "LOCKERROOM_MAIN_HEADER_03")
-            imageView.image = image
-            
-            
-            self.navigationItem.titleView = imageView
-       
         })
-       
+ 
         // Do any additional setup after loading the view.
+        
+        //Slide out menu
+  
+            menuButton.target = revealViewController()
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+            
+        actionButton.target = revealViewController()
+        actionButton.action = #selector(SWRevealViewController.revealToggle(_:))
         
     }
     
