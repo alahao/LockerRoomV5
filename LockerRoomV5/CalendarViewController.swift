@@ -40,6 +40,7 @@ class CalendarViewController: UIViewController, UITableViewDataSource, UITableVi
             menuButton.target = revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         }
     }
     

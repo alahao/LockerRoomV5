@@ -38,6 +38,7 @@
 		3D78AD9D1E3EA47E001C10DB /* ICON_ADD.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D78AD841E3EA47E001C10DB /* ICON_ADD.png */; };
 		3D78AD9E1E3EA47E001C10DB /* ICON_FAQ.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D78AD851E3EA47E001C10DB /* ICON_FAQ.png */; };
 		3D82FE041E4EF51A00413EE3 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D82FE031E4EF51A00413EE3 /* CalendarTableViewCell.swift */; };
+		3D82FE061E4F9CA900413EE3 /* newsDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D82FE051E4F9CA900413EE3 /* newsDetailedViewController.swift */; };
 		3DAEF1BD1E462B800060D53D /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAEF1BC1E462B800060D53D /* NewsArticle.swift */; };
 		3DAEF1C01E4643770060D53D /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAEF1BF1E4643770060D53D /* ContactViewController.swift */; };
 		3DAEF1C21E468D740060D53D /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAEF1C11E468D740060D53D /* Contacts.swift */; };
@@ -132,6 +133,7 @@
 		3D78AD841E3EA47E001C10DB /* ICON_ADD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ICON_ADD.png; sourceTree = "<group>"; };
 		3D78AD851E3EA47E001C10DB /* ICON_FAQ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ICON_FAQ.png; sourceTree = "<group>"; };
 		3D82FE031E4EF51A00413EE3 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
+		3D82FE051E4F9CA900413EE3 /* newsDetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsDetailedViewController.swift; sourceTree = "<group>"; };
 		3DAEF1BC1E462B800060D53D /* NewsArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsArticle.swift; sourceTree = "<group>"; };
 		3DAEF1BF1E4643770060D53D /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		3DAEF1C11E468D740060D53D /* Contacts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 				3D78AD6B1E3EA04E001C10DB /* HomeViewController.swift */,
 				3D6212DD1E4EDF30008936C4 /* Main.storyboard */,
 				3DAEF1C31E497FF40060D53D /* NewsTableViewCell.swift */,
+				3D82FE051E4F9CA900413EE3 /* newsDetailedViewController.swift */,
 				3DAEF1BF1E4643770060D53D /* ContactViewController.swift */,
 				3D2373E61E4C2B5200011155 /* ContactTableViewCell.swift */,
 				3D6212E21E4EEC65008936C4 /* CalendarViewController.swift */,
@@ -727,6 +730,7 @@
 			files = (
 				3DEE9B491E3DA1D6001A4ED1 /* RootViewController.swift in Sources */,
 				3DAEF1C41E497FF40060D53D /* NewsTableViewCell.swift in Sources */,
+				3D82FE061E4F9CA900413EE3 /* newsDetailedViewController.swift in Sources */,
 				3DAEF1F71E4996F00060D53D /* RootMenuTableViewCell.swift in Sources */,
 				3D6212E31E4EEC65008936C4 /* CalendarViewController.swift in Sources */,
 				3DAEF1BD1E462B800060D53D /* NewsArticle.swift in Sources */,
