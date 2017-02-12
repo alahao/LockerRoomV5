@@ -12,17 +12,25 @@ import WebKit
 
 class newsDetailedViewController: UIViewController, WKUIDelegate {
     @IBOutlet weak var newsDetailedTitle: UILabel!
-    @IBOutlet weak var newsDetailedBody: UITextView!
+   
+    @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var newsDetailedBody: UILabel!
     
     var newsArticle = NewsArticle()
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        newsDetailedTitle.text = newsArticle.newsTitle
-        newsDetailedBody.text = newsArticle.newsBody
+       
+        
+        let myURL = URL(string: newsArticle.newsBody)
+        let myRequest = URLRequest(url: myURL!)
+        webView.load(myRequest)
+        
     }
 
   
